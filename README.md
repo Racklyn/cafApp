@@ -1,5 +1,7 @@
 # ☕ CafApp
 
+**Dupla:** Jucyelle Barros e Racklyn Sotero.
+
 O projeto **CafApp** se trata de uma plataforma web que fornece ao usuário a possibilidade de preparar ao seu gosto a bebida que deseja comprar no estabelecimento, de acordo com os diversos ingredientes já fornecidos. Além de interagir com o preparo delas visualmente na tela, será possível adicionar acompanhamentos e exportar um ticket com o ID único da compra, informando os principais detalhes do pedido.
 
 ## Tecnologias utilizadas
