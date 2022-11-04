@@ -26,12 +26,10 @@ O projeto **CafApp** se trata de uma plataforma web que fornece ao usuário a po
 - criação do perfil de admin e suas funcionalidades.
 
 ## Planejamento das telas:
-- Login;
-- Tela principal: botão “Incremente sua bandeja”, definir sessões para ter um saiba mais sobre o estabelecimento;
---
+- **Login**;
+- **Tela principal:** botão “Incremente sua bandeja”, definir sessões para ter um saiba mais sobre o estabelecimento; <br/>
 (Side-bar a partir daqui com a bandeja)
-- Opções: Mostrar opções de bebidas e acompanhamentos (dos acompanhamentos já tem a opção de definir quantidade e adicionar a bandeja, além do preço fixo);
-##caso escolha alguma opção de bebida
-Fazer tipo slide (mudando a imagem do copo e as opções / no último mostrar opção de definir quantidade e adicionar a bandeja).
-
-A side-bar vai ter uma opção de finalizar o pedido, que levará para outra tela, onde pode mostrar o ticket para exportação.
+- **Opções:** Mostrar opções de bebidas e acompanhamentos (dos acompanhamentos já tem a opção de definir quantidade e adicionar a bandeja, além do preço fixo); <br/>
+(Caso escolha alguma opção de bebida)
+- **Tela de preparo:** Fazer tipo slide (mudando a imagem do copo e as opções / no último mostrar opção de definir quantidade e adicionar a bandeja).
+- **Finalizar pedido:** A side-bar vai ter uma opção de finalizar o pedido, que levará para esta tela, onde pode mostrar o ticket para exportação e confirmação da "compra".
