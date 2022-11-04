@@ -2,7 +2,7 @@
 
 **Dupla:** Jucyelle Barros e Racklyn Sotero.
 
-O projeto **CafApp** se trata de uma plataforma web que fornece ao usuário a possibilidade de preparar ao seu gosto a bebida que deseja comprar no estabelecimento, de acordo com os diversos ingredientes já fornecidos. Além de interagir com o preparo delas visualmente na tela, será possível adicionar acompanhamentos e exportar um ticket com o ID único da compra, informando os principais detalhes do pedido.
+O projeto **CafApp** se trata de uma plataforma web que fornece ao usuário a possibilidade de preparar ao seu gosto a bebida que deseja comprar no estabelecimento (café, chá, chocolate quente, ...) de acordo com os diversos ingredientes já fornecidos. Além de interagir com cada passo do preparo das bebidas visualmente na tela (fervendo água, adicionando os ingredientes, misturando-os, etc...), será possível adicionar acompanhamentos à bandeja da compra (biscoitos, chocolates, etc...) e exportar um ticket com o ID único da compra, informando os principais detalhes do pedido.
 
 ## Tecnologias utilizadas
 - React.js
@@ -23,11 +23,12 @@ O projeto **CafApp** se trata de uma plataforma web que fornece ao usuário a po
 - exportar um ticket com o ID do pedido e suas principais informações;
 
 ### Funcionalidades futuras:
+- cadastro na plataforma;
 - histórico de pedidos;
 - possibilidade de repetir os pedidos;
 - criação do perfil de admin e suas funcionalidades.
 
-## Planejamento das telas:
+## Planejamento das telas
 - **Login**;
 - **Tela principal:** botão “Incremente sua bandeja”, definir sessões para ter um saiba mais sobre o estabelecimento; <br/>
 (Side-bar a partir daqui com a bandeja)
@@ -35,3 +36,10 @@ O projeto **CafApp** se trata de uma plataforma web que fornece ao usuário a po
 (Caso escolha alguma opção de bebida)
 - **Tela de preparo:** Fazer tipo slide (mudando a imagem do copo e as opções / no último mostrar opção de definir quantidade e adicionar a bandeja).
 - **Finalizar pedido:** A side-bar vai ter uma opção de finalizar o pedido, que levará para esta tela, onde pode mostrar o ticket para exportação e confirmação da "compra".
+
+## Padrões de projeto
+A princípio, planejamos utilizar os seguintes padrões de projeto:
+- Template Method;
+- Strategy;
+- Singleton;
+- (a definir...)
