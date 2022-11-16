@@ -28,6 +28,8 @@ O projeto **CafApp** se trata de uma plataforma web que fornece ao usuário a po
 - possibilidade de repetir os pedidos;
 - criação do perfil de admin e suas funcionalidades.
 
+Vizualize a lista mais completa com as funcionalides **[clicando aqui](https://www.notion.so/CafApp-Levantamento-de-Requisitos-Funcionalidades-cec387ed996043ee9549f4599d2590de)**.
+
 ## Planejamento das telas
 - **Login**;
 - **Tela principal:** botão “Incremente sua bandeja”, definir sessões para ter um saiba mais sobre o estabelecimento; <br/>
