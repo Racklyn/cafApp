@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:regular,bold,italic&subset=latin,latin-ext');
+
+body{
+  background-color: #D2C1B0;
+}
+
+.container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.box{
+  width: 500px;
+  height: 300px;
+  font-family: Nunito;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+button{
+  background-color: #3C2F2F;
+  border-radius: 40px;
+  padding: 4px 6px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover{
+  transition: 0.5s;
+  opacity: 0.9;
+}
