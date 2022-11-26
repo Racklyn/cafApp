@@ -4,6 +4,8 @@
 
 O projeto **CafApp** se trata de uma plataforma web que fornece ao usuário a possibilidade de preparar ao seu gosto a bebida que deseja comprar no estabelecimento (café, chá, chocolate quente, ...) de acordo com os diversos ingredientes já fornecidos. Além de interagir com cada passo do preparo das bebidas visualmente na tela (fervendo água, adicionando os ingredientes, misturando-os, etc...), será possível adicionar acompanhamentos à bandeja da compra (biscoitos, chocolates, etc...) e exportar um ticket com o ID único da compra, informando os principais detalhes do pedido.
 
+**[Esboço do sistema no Figma.](https://www.figma.com/file/cbFD16ShewzOeEJGmOKnK8/cafApp?node-id=0%3A1&t=lpCMkFILkIbergkT-1)**
+
 ## Tecnologias utilizadas
 - React.js
 - SQLite
