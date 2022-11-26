@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:regular,bold,italic&subset=latin,latin-ext');
+
+body{
+  background-color: #D2C1B0;
+}
+
+.div-principal{
+  font-family: Nunito;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 50px;
+}
+
+.p-detail{
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+.button-comprar{
+  background-color: #3C2F2F;
+  color: #D2C1B0;
+  font-family: Nunito;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 20px;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.bandeja{
+  margin: 50px auto;
+  width: 600px;
+  height: 300px;
+  text-align: center;
+  border-radius: 20px;
+  border-color: #3C2F2F;
+  border-style: solid;
+  border-width: 2px;
+  font-family: Nunito;
+}
+
+.bandeja-info{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 40px;
+}
+
+p{
+  margin: 0;
+}
+
+#b-title{
+  font-weight: bold;
+}

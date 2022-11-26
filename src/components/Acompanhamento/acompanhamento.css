@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:regular,bold,italic&subset=latin,latin-ext');
+
+.div-geral{
+  width: 235px;
+  height: 250px;
+  background-color: #BE9B7B;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 15px;
+  font-family: Nunito;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.div-info{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px 31px;
+}
+
+.div-comprar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px 23px;
+
+}
+
+.div-add{
+  display: flex;
+  flex-direction: row;
+  font-weight: 100;
+}
+
+button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.p-info{
+  margin: 0;
+}
+
+.p-add{
+  margin: 12px 0;
+}
