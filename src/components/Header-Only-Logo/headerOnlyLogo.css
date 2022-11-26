@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:regular,bold,italic&subset=latin,latin-ext');
+
+nav{
+  height: 90px;
+}
+
+.div-header-only{
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
