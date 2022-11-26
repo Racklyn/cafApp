@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:regular,bold,italic&subset=latin,latin-ext');
 
-body{
+main{
   background-color: #D2C1B0;
 }
 
-.div-principal{
+.div-opcoes{
   font-family: Nunito;
   font-size: 18px;
   font-weight: bold;

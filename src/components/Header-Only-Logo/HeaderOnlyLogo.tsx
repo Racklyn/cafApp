@@ -5,7 +5,7 @@ import './headerOnlyLogo.css';
 const HeaderOnlyLogo = () => {
   return(
     <nav>
-      <div className='div-header'>
+      <div className='div-header-only'>
         <Logo/>
       </div>
     </nav>

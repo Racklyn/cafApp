@@ -4,11 +4,11 @@ import './opcoes.css';
 
 const Opcoes = () => {
   return (
-    <body>
+    <main>
       <div>
         <HeaderOnlyLogo/>
       </div>
-      <div className='div-principal'>
+      <div className='div-opcoes'>
         <p>Escolha o tipo de bebida:</p>
         <div>
 
@@ -32,7 +32,7 @@ const Opcoes = () => {
           </div>
         </div>
       </div>
-    </body>
+    </main>
   );
 }
 
