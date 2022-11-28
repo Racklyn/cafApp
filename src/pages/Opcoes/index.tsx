@@ -7,11 +7,13 @@ import ChocoCardImg from '../../assets/choco-card-img.png'
 
 import HeaderOnlyLogo from '../../components/Header-Only-Logo/HeaderOnlyLogo';
 import DrinkOptionCard from '../../components/DrinkOptionCard';
+import DrinkSizeCard from '../../components/DrinkSizeCard';
 
 
 const Opcoes = () => {
 
   const [selDrinkOption, setSelDrinkOption] = useState("COFFEE" as "COFFEE"|"TEA"|"CHOCO")
+  const [selDrinkSize, setSelDrinkSize] = useState("P" as "P"|"M"|"G")
 
   return (
     <main>
@@ -40,10 +42,31 @@ const Opcoes = () => {
             onClick={() => setSelDrinkOption("CHOCO")}
           />
         </div>
+
         <p>Escolha o tamanho da xícara:</p>
         <p className='p-detail'><i>(Os preços diferem de um para o outro de R$3.00. O menor tamanho custa R$8.00)</i></p>
-        <div>
-
+        <div className='drink-sizes-container'>
+          <DrinkSizeCard
+            title='P'
+            subtitle='100mL'
+            price={`R$ 3,00`}
+            isSelected={selDrinkSize==="P"}
+            onClick={() => setSelDrinkSize("P")}
+          />
+          <DrinkSizeCard
+            title='M'
+            subtitle='200mL'
+            price={`R$ 3,00`}
+            isSelected={selDrinkSize==="M"}
+            onClick={() => setSelDrinkSize("M")}
+          />
+          <DrinkSizeCard
+            title='G'
+            subtitle='300mL'
+            price={`R$ 3,00`}
+            isSelected={selDrinkSize==="G"}
+            onClick={() => setSelDrinkSize("G")}
+          />
         </div>
         <button className='button-comprar'>COMPRAR</button>
       </div>

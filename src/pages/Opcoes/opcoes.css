@@ -24,6 +24,14 @@ main{
   font-weight: lighter;
 }
 
+.drink-sizes-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 20px 40px;
+}
+
+
 .button-comprar{
   background-color: #3C2F2F;
   color: #D2C1B0;

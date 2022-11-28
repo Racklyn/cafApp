@@ -28,4 +28,12 @@ export default abstract class Drink {
         //TODO: TO be implemented
     }
 
+    image() {
+        return (
+            <div>
+                <p>Teste</p>
+            </div>
+        )
+    }
+
 }
