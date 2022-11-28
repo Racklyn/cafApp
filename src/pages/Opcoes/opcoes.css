@@ -12,6 +12,13 @@ main{
   margin: 0 50px;
 }
 
+.drink-options-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 20px 40px;
+}
+
 .p-detail{
   font-size: 15px;
   font-weight: lighter;

@@ -1,17 +1,44 @@
-import React from 'react';
-import HeaderOnlyLogo from '../../components/Header-Only-Logo/HeaderOnlyLogo';
+import React, { useState } from 'react';
 import './opcoes.css';
 
+import CoffeeCardImg from '../../assets/coffee-card-img.png'
+import TeaCardImg from '../../assets/tea-card-img.png'
+import ChocoCardImg from '../../assets/choco-card-img.png'
+
+import HeaderOnlyLogo from '../../components/Header-Only-Logo/HeaderOnlyLogo';
+import DrinkOptionCard from '../../components/DrinkOptionCard';
+
+
 const Opcoes = () => {
+
+  const [selDrinkOption, setSelDrinkOption] = useState("COFFEE" as "COFFEE"|"TEA"|"CHOCO")
+
   return (
     <main>
       <div>
         <HeaderOnlyLogo/>
       </div>
       <div className='div-opcoes'>
-        <p>Escolha o tipo de bebida:</p>
-        <div>
-
+        <p>Escolha qual a bebida:</p>
+        <div className='drink-options-container'>
+          <DrinkOptionCard
+            title="Café"
+            image={CoffeeCardImg}
+            isSelected={selDrinkOption==="COFFEE"}
+            onClick={() => setSelDrinkOption("COFFEE")}
+          />
+          <DrinkOptionCard
+            title="Chá"
+            image={TeaCardImg}
+            isSelected={selDrinkOption==="TEA"}
+            onClick={() => setSelDrinkOption("TEA")}
+          />
+          <DrinkOptionCard
+            title="Chocolate Quente"
+            image={ChocoCardImg}
+            isSelected={selDrinkOption==="CHOCO"}
+            onClick={() => setSelDrinkOption("CHOCO")}
+          />
         </div>
         <p>Escolha o tamanho da xícara:</p>
         <p className='p-detail'><i>(Os preços diferem de um para o outro de R$3.00. O menor tamanho custa R$8.00)</i></p>
