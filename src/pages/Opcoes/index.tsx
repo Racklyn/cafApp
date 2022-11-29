@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './opcoes.css';
 
 import CoffeeCardImg from '../../assets/coffee-card-img.png'
@@ -72,38 +73,38 @@ const Opcoes = () => {
                   />
                 </div>
 
-                <p>Escolha o tamanho da xícara:</p>
-                <div className='drink-sizes-container'>
-                  <DrinkSizeCard
-                    title='P'
-                    subtitle='100mL'
-                    price={`R$ 3,00`}
-                    isSelected={selDrinkSize === "P"}
-                    onClick={() => setSelDrinkSize("P")}
-                  />
-                  <DrinkSizeCard
-                    title='M'
-                    subtitle='200mL'
-                    price={`R$ 3,00`}
-                    isSelected={selDrinkSize === "M"}
-                    onClick={() => setSelDrinkSize("M")}
-                  />
-                  <DrinkSizeCard
-                    title='G'
-                    subtitle='300mL'
-                    price={`R$ 3,00`}
-                    isSelected={selDrinkSize === "G"}
-                    onClick={() => setSelDrinkSize("G")}
-                  />
-                </div>
-                <Button
-                  title='COMPRAR'
-                  isDark
-                  onClick={addDrink}
-                />
-              </div>
-
-            </main>
+          <p>Escolha o tamanho da xícara:</p>
+          <div className='drink-sizes-container'>
+            <DrinkSizeCard
+              title='P'
+              subtitle='100mL'
+              price={`R$ 3,00`}
+              isSelected={selDrinkSize === "P"}
+              onClick={() => setSelDrinkSize("P")}
+            />
+            <DrinkSizeCard
+              title='M'
+              subtitle='200mL'
+              price={`R$ 3,00`}
+              isSelected={selDrinkSize === "M"}
+              onClick={() => setSelDrinkSize("M")}
+            />
+            <DrinkSizeCard
+              title='G'
+              subtitle='300mL'
+              price={`R$ 3,00`}
+              isSelected={selDrinkSize === "G"}
+              onClick={() => setSelDrinkSize("G")}
+            />
+          </div>
+          <Button
+            title='COMPRAR'
+            isDark
+            onClick={()=> {}}
+          />
+        </div>
+    
+      </main>
 
             <TrayMenu tray={tray} />
 

@@ -1,0 +1,33 @@
+.size-card-container p{
+  padding-top: 2px;
+  user-select: none;
+}
+
+.size-card-container {
+  transition: opacity 0.3s;
+}
+
+.size-card-container:hover {
+  opacity: 1;
+}
+
+.size-card {
+  width: 110px;
+  height: 110px;
+  background: #BE9B7B;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  font-size: 18px;
+}
+
+.size-card:hover{
+  cursor: pointer;
+}
+
+.not-selected-size-card{
+  opacity: 0.4;
+}
