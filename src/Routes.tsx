@@ -8,6 +8,7 @@ import {
 
 import Home from './pages/Home'
 import Opcoes from './pages/Opcoes';
+import Criacao from './pages/Criacao';
 
 export default function Routes(){
 
@@ -20,6 +21,10 @@ export default function Routes(){
             path: "/opcoes",
             element: <Opcoes/>,
         },
+        {
+            path: "/criacao",
+            element: <Criacao/>,
+        }
       ]);
 
     return(

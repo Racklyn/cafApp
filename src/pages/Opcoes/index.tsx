@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './opcoes.css';
 
 import CoffeeCardImg from '../../assets/coffee-card-img.png'
@@ -70,11 +71,14 @@ const Opcoes = () => {
               onClick={() => setSelDrinkSize("G")}
             />
           </div>
-          <Button
-            title='COMPRAR'
-            isDark
-            onClick={()=> {}}
-          />
+          <Link to='/criacao'>
+            <Button
+              title='CRIAR'
+              isDark
+              onClick={()=> {}}
+            />
+          </Link>
+          
         </div>
     
       </main>

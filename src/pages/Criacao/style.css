@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:regular,bold,italic&subset=latin,latin-ext');
+
+main{
+  background-color: #D2C1B0;
+}
+
+#p-obs{ 
+  font-size: 15px; 
+  font-weight: lighter;
+}
+
+.div-complementos{
+  font-family: Nunito;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 50px;
+}
+
+.button-next{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.div-sugar-options{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 20px 40px;
+}
+
+.div-flavor-options{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 20px 40px;
+}
