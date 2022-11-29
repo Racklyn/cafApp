@@ -1,4 +1,6 @@
-export default abstract class Drink {
+import Item from "./Item"
+
+export default abstract class Drink extends Item {
     cupSize: "P"|"M"|"G" = "P"
 
     //TODO: To be implemented
@@ -9,6 +11,8 @@ export default abstract class Drink {
     // selectedComplements:
 
     constructor(cupSize: "P"|"M"|"G") {
+        let price = cupSize=="P" ? 3 : cupSize=="M" ? 5 : 7
+        super(price)
         this.cupSize = cupSize
     }
 

@@ -1,12 +1,13 @@
+import Tray from "../../model/Tray";
 import Button from "../Button";
 import "./styles.css"
 
 type Props = {
-    title?: string;
+    tray: Tray;
     onClick?: () => void;
 }
 
-function Tray({ title, onClick }: Props) {
+function TrayMenu({ tray, onClick }: Props) {
 
     return (
         <div className="tray-container">
@@ -19,7 +20,7 @@ function Tray({ title, onClick }: Props) {
             <hr/>
 
             <div className="items-container">
-
+                {tray.items.length} itens adicionados
             </div>
 
             <span>
@@ -35,4 +36,4 @@ function Tray({ title, onClick }: Props) {
     )
 }
 
-export default Tray
+export default TrayMenu
