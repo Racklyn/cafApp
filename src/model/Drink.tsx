@@ -1,6 +1,8 @@
 import Item from "./Item"
+import testeCup from '../assets/drinkImages/teste-cup.png'
 
 export default abstract class Drink extends Item {
+    
     cupSize: "P"|"M"|"G" = "P"
 
     //TODO: To be implemented
@@ -35,7 +37,7 @@ export default abstract class Drink extends Item {
     image() {
         return (
             <div>
-                <p>Teste</p>
+                <img style={{height: "40px"}} src={testeCup} alt="Imagem bebida" />
             </div>
         )
     }

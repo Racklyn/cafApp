@@ -15,4 +15,10 @@ export default class Tray {
     removeItemAt(idx: number){
         this.items.splice(idx, 1)
     }
+    
+    getTotal(){
+        let total = 0
+        this.items.forEach(i => total += i.price)
+        return total
+    }
 }

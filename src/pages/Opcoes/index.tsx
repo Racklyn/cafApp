@@ -17,8 +17,17 @@ import Coffee from '../../model/Coffee';
 import Tea from '../../model/Tea';
 import HotChocolate from '../../model/HotChocolate';
 
+type sizes = 'P'|'M'|'G'
 
 const Opcoes = () => {
+
+  const drinkSizes = [["P", "100ml"],["M", "100ml"],["G", "100ml"]]
+
+  const drinkPrices = {
+    "COFFEE": {"P":3, "M":5, "G":7},
+    "TEA": {"P":2.5, "M":4, "G":5.5},
+    "CHOCO": {"P":3.5, "M":5.5, "G":8}
+  }
 
   const { user } = useMain()
 
@@ -26,7 +35,7 @@ const Opcoes = () => {
   const [tray, setTray] = useState({} as Tray)
 
   const [selDrinkOption, setSelDrinkOption] = useState("COFFEE" as "COFFEE" | "TEA" | "CHOCO")
-  const [selDrinkSize, setSelDrinkSize] = useState("P" as "P" | "M" | "G")
+  const [selDrinkSize, setSelDrinkSize] = useState("P" as sizes)
 
   useEffect(() => {
     if (user?.name) {
@@ -75,32 +84,25 @@ const Opcoes = () => {
 
           <p>Escolha o tamanho da xícara:</p>
           <div className='drink-sizes-container'>
-            <DrinkSizeCard
-              title='P'
-              subtitle='100mL'
-              price={`R$ 3,00`}
-              isSelected={selDrinkSize === "P"}
-              onClick={() => setSelDrinkSize("P")}
-            />
-            <DrinkSizeCard
-              title='M'
-              subtitle='200mL'
-              price={`R$ 3,00`}
-              isSelected={selDrinkSize === "M"}
-              onClick={() => setSelDrinkSize("M")}
-            />
-            <DrinkSizeCard
-              title='G'
-              subtitle='300mL'
-              price={`R$ 3,00`}
-              isSelected={selDrinkSize === "G"}
-              onClick={() => setSelDrinkSize("G")}
-            />
+            {
+              drinkSizes.map(s =>{
+                let [l, size] = s
+                return(
+                  <DrinkSizeCard
+                    title={l}
+                    subtitle={size}
+                    price={`R$ ${drinkPrices[selDrinkOption][l as sizes]}`}
+                    isSelected={selDrinkSize === l}
+                    onClick={() => setSelDrinkSize(l as sizes)}
+                  />
+                )
+              })
+            }
           </div>
           <Button
             title='COMPRAR'
             isDark
-            onClick={()=> {}}
+            onClick={addDrink}
           />
         </div>
     

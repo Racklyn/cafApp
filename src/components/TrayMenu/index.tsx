@@ -1,13 +1,12 @@
-import Tray from "../../model/Tray";
-import Button from "../Button";
+import Tray from "../../model/Tray"
+import Button from "../Button"
 import "./styles.css"
 
 type Props = {
     tray: Tray;
-    onClick?: () => void;
 }
 
-function TrayMenu({ tray, onClick }: Props) {
+function TrayMenu({ tray }: Props) {
 
     return (
         <div className="tray-container">
@@ -20,12 +19,20 @@ function TrayMenu({ tray, onClick }: Props) {
             <hr/>
 
             <div className="items-container">
-                {tray.items.length} itens adicionados
+                
+                {tray.items.map(item => {
+                    return(
+                        <>
+                            <p>Item: {item.title}</p>
+                            {item.image()}
+                        </>
+                    )
+                })}
             </div>
 
             <span>
                 <p>TOTAL</p>
-                <p>R$ 0,00</p>
+                <p>R$ {tray.getTotal()}</p>
             </span>
             <Button
                 title="FINALIZAR"
