@@ -72,8 +72,9 @@ const Criacao = () => {
         />
         </div>
         
-        {/* adicionar o link aqui */}
-        <button className='button-next'><ArrowRight size={35} weight="bold" /></button>
+        <Link to='/visualizacao'>
+          <button className='button-next'><ArrowRight size={35} weight="bold" /></button>
+        </Link>
       </div>
     </main>
   );

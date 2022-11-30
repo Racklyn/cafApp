@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Tray from "../../model/Tray"
 import Button from "../Button"
 import "./styles.css"
@@ -34,11 +35,12 @@ function TrayMenu({ tray }: Props) {
                 <p>TOTAL</p>
                 <p>R$ {tray.getTotal()}</p>
             </span>
-            <Button
-                title="FINALIZAR"
-                onClick={() => {}}
-            />
-
+            <Link to='/final'>
+                <Button
+                    title="FINALIZAR"
+                    onClick={() => {}}
+                />
+            </Link>
         </div>
     )
 }

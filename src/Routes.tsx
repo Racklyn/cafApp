@@ -9,6 +9,8 @@ import {
 import Home from './pages/Home'
 import Opcoes from './pages/Opcoes';
 import Criacao from './pages/Criacao';
+import Visualizacao from './pages/Visualizacao';
+import Final from './pages/Final/Final';
 
 export default function Routes(){
 
@@ -24,6 +26,14 @@ export default function Routes(){
         {
             path: "/criacao",
             element: <Criacao/>,
+        },
+        {
+            path: "/visualizacao",
+            element: <Visualizacao/>,
+        },
+        {
+            path: "/final",
+            element: <Final/>,
         }
       ]);
 
