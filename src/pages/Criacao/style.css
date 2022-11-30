@@ -36,3 +36,10 @@ main{
   justify-content: space-around;
   padding: 20px 40px;
 }
+
+.div-complemento-options{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 20px 40px;
+}
