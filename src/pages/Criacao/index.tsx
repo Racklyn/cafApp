@@ -20,13 +20,16 @@ import ComplementoCard from '../../components/ComplementoCard';
 import {ArrowRight} from 'phosphor-react';
 import { drinkOptions, sizes } from '../Opcoes';
 
+import Complement from '../../model/Complement';
+import Flavor from '../../model/Flavor';
+import { useMain } from '../../contexts/main';
+//import { VisualizacaoParams } from '../Visualizacao';
+
 export type CriacaoParams = {
   drinkType: drinkOptions;
   drinkSize: sizes;
 }
 
-import Complement from '../../model/Complement';
-import Flavor from '../../model/Flavor';
 
 const Criacao = () => {
 
@@ -34,6 +37,8 @@ const Criacao = () => {
   const {drinkType, drinkSize} = location.state as CriacaoParams
 
   const navigate = useNavigate()
+
+  const {currentDrink} = useMain()
 
   const complementos = [
     new Complement('Chocolate', '', chocolateComp), 
@@ -63,9 +68,11 @@ const Criacao = () => {
   const [selSugarQtd, setSugarQtd] = useState("0" as "0" | "1" | "2" | "3")
 
   function navigateToViewPage() {
-    navigate('/visualizacao', {state: {
-      
-    }})
+    //currentDrink.selectedComplements.push(complementos[0]) //TODO: Change this
+    currentDrink.selectedComplement = complementos[0]
+    currentDrink.selectedFlavor = saboresCafe[1]
+
+    navigate('/visualizacao')
   }
 
   return (
