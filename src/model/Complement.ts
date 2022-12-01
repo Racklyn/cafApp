@@ -1,11 +1,11 @@
 export default class Complement {
-    title: String
-    description: String
-    //image: 
+    title: string
+    description: string
+    imageUrl: string
 
-    constructor (title: String, description: String){
+    constructor (title: string, description: string, imageUrl: string){
         this.title = title
         this.description = description
-        //
+        this.imageUrl = imageUrl
     }
 }

@@ -27,7 +27,7 @@ function TrayMenu({ tray }: Props) {
                 {tray.items.map(item => {
                     return(
                         <>
-                            <p>Item: {item.title}</p>
+                            <p>Item: {item.getInfo()}</p>
                             {item.image(60)}
                         </>
                     )

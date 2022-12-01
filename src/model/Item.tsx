@@ -7,4 +7,5 @@ export default abstract class Item {
     }
 
     abstract image: (size:number) => {}
+    abstract getInfo():string
 }

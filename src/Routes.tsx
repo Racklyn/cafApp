@@ -4,6 +4,8 @@ import {
     createBrowserRouter,
     RouterProvider,
     Route,
+    BrowserRouter,
+    Routes as RoutesContainer
   } from "react-router-dom";
 
 import Home from './pages/Home'
@@ -39,14 +41,16 @@ export default function Routes(){
 
     return(
 
-        <RouterProvider router={router} />
+        //<RouterProvider router={router} />
 
-        // <BrowserRouter>
-        //     <Routes>
-        //         <Route path="/" element={Home}/>
-        //         <Route path="/app" element={OrphanagesMap}/>
-
-        //     </Routes>
-        // </BrowserRouter>
+        <BrowserRouter>
+            <RoutesContainer>
+                <Route path="/" element={<Home/>}/>
+                <Route path="/opcoes" element={<Opcoes/>}/>
+                <Route path="/criacao" element={<Criacao/>}/>
+                <Route path="/visualizacao" element={<Visualizacao/>}/>
+                <Route path="/final" element={<Final/>}/>
+            </RoutesContainer>
+        </BrowserRouter>
     )
 }

@@ -10,7 +10,7 @@ export default abstract class Drink extends Item {
     //TODO: To be implemented
     
     // availableFlavors: 
-    // availableComplements:
+    //availableComplements: []
     // selectedFlavor:
     // selectedComplements:
 
@@ -49,6 +49,10 @@ export default abstract class Drink extends Item {
                 <img className="img-complement" src={testeComp} alt="Imagem bebida" />
             </div>
         )
+    }
+
+    getInfo() {
+        return this.title + " " + this.cupSize
     }
 
 }

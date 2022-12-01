@@ -1,14 +1,22 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import './style.css';
 
 import { MdAddShoppingCart } from "react-icons/md";
 
 import HeaderOnlyLogo from '../../components/Header-Only-Logo/HeaderOnlyLogo';
 import Button from '../../components/Button';
+import { CriacaoParams } from '../Criacao';
+
+type VisualizacaoParams = CriacaoParams & {
+  
+}
 
 const Visualizacao = () => {
  
+  const location = useLocation()
+  const {drinkType, drinkSize} = location.state as VisualizacaoParams
+
   return (
     <main>
       <div>

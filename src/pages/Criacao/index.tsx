@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import './style.css';
 
 import expressoCafe from '../../assets/expresso-cafe-img.png'
@@ -18,8 +18,19 @@ import FlavorCard from '../../components/FlavorCard';
 import ComplementoCard from '../../components/ComplementoCard';
 
 import {ArrowRight} from 'phosphor-react';
+import { drinkOptions, sizes } from '../Opcoes';
+
+export type CriacaoParams = {
+  drinkType: drinkOptions;
+  drinkSize: sizes;
+}
 
 const Criacao = () => {
+
+  const location = useLocation()
+  const {drinkType, drinkSize} = location.state as CriacaoParams
+
+  const navigate = useNavigate()
 
   const complementos = [
     {
@@ -56,6 +67,12 @@ const Criacao = () => {
   };
 
   const [selSugarQtd, setSugarQtd] = useState("0" as "0" | "1" | "2" | "3")
+
+  function navigateToViewPage() {
+    navigate('/visualizacao', {state: {
+      
+    }})
+  }
 
   return (
     <main>
@@ -124,9 +141,10 @@ const Criacao = () => {
         />
         </div>
         
-        <Link to='/visualizacao'>
-          <button className='button-next'><ArrowRight size={35} weight="bold" /></button>
-        </Link>
+        
+        <button className='button-next' onClick={navigateToViewPage}>
+          <ArrowRight size={35} weight="bold" />
+        </button>
       </div>
     </main>
   );
