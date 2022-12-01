@@ -14,6 +14,12 @@ const Visualizacao = () => {
       <div>
         <HeaderOnlyLogo/>
       </div>
+      <div className='div-info-steps'>
+        <span>ADICIONANDO A BEBIDA</span>
+        <span>{`>`} ADICIONANDO O COMPLEMENTO</span>
+        <span>{`>`} ADOÇANDO</span>
+        <span>{`>`} MISTURANDO</span>
+      </div>
       <div className='div-visualizacao'>
         {/*adicionar aqui o gif do cafe*/}
         <Button className='button-mix'
