@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:regular,bold,italic&subset=latin,latin-ext');
+
+main{
+  background-color: #D2C1B0;
+}
+
+.div-visualizacao{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 15px;
+}
+
+.div-info-steps{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.padding-span{
+  padding-left: 10px;
+}
+
+.button-mix{
+  width: 120px;
+  height: 40px;
+  font-size: 25px;
+  font-family: Nunito;
+  font-weight: bold;
+  color: #D2C1B0;
+}
+
+.button-add{
+  background-color: transparent;
+  cursor: pointer;
+  padding-top: 15px;
+
+}

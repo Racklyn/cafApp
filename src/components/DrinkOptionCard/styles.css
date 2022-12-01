@@ -1,0 +1,39 @@
+.drink-card {
+    width: 180px;
+    height: 180px;
+    background: #BE9B7B;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 4px;
+    border-radius: 24px;
+}
+
+.drink-card:hover{
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.not-selected-drink-card{
+    opacity: 0.48;
+}
+
+.icon-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 4px;
+}
+
+.drink-card img {
+    margin: 0 18px;
+    border-radius: 30px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.drink-card p{
+    padding-top: 4px;
+    font-size: 14px;
+}

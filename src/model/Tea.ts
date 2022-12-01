@@ -1,12 +1,13 @@
 import Drink from "./Drink";
 
 export default class Tea extends Drink{
+    title = "Chá"
 
-    addMainIngredient(){
+    addMainIngredientToCupImage(){
         //TODO: To be implemented
         alert("Add chá")
     }
-    addComplements(){
+    addComplementsToCupImage(){
         //TODO: To be implemented
         alert("Add complementos ao chá")
     }

@@ -1,52 +1,47 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:regular,bold,italic&subset=latin,latin-ext');
 
-.pedido-container{
-  display: flex;
-  flex-direction: row;
-  height: 100vh;
-}
-
-.pedido-container main{
+main{
   background-color: #D2C1B0;
-  width: 100%;
-  overflow-y: scroll;
 }
 
-.pedido-container main::-webkit-scrollbar {
-  display: none;
+#p-obs{ 
+  font-size: 15px; 
+  font-weight: lighter;
 }
 
-.pedido-container main {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.div-opcoes{
+.div-complementos{
   font-family: Nunito;
-  font-size: 18px;
+  font-size: 21px;
   font-weight: bold;
   text-align: center;
   margin: 0 50px;
 }
 
-.drink-options-container{
+.button-next{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-top: 5px;
+  margin-bottom: 60px;
+}
+
+.div-sugar-options{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   padding: 20px 40px;
 }
 
-.drink-sizes-container{
+.div-flavor-options{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   padding: 20px 40px;
 }
 
-p{
-  margin: 0;
-}
-
-#b-title{
-  font-weight: bold;
+.div-complemento-options{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 20px 40px;
 }
