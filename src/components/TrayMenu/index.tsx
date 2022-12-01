@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useMain } from "../../contexts/main";
 import Tray from "../../model/Tray"
 import Button from "../Button"
@@ -37,11 +38,12 @@ function TrayMenu({ tray }: Props) {
                 <p>TOTAL</p>
                 <p>R$ {tray.getTotal()}</p>
             </span>
-            <Button
-                title="FINALIZAR"
-                onClick={() => {alert("Pedido NÃO realizado. Essa é uma loja fictícia :)")}}
-            />
-
+            <Link to='/final'>
+                <Button
+                    title="FINALIZAR"
+                    onClick={() => {}}
+                />
+            </Link>
         </div>
     )
 }
