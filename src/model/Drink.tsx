@@ -1,4 +1,8 @@
-export default abstract class Drink {
+import Item from "./Item"
+import testeCup from '../assets/drinkImages/teste-cup.png'
+
+export default abstract class Drink extends Item {
+    
     cupSize: "P"|"M"|"G" = "P"
 
     //TODO: To be implemented
@@ -9,6 +13,8 @@ export default abstract class Drink {
     // selectedComplements:
 
     constructor(cupSize: "P"|"M"|"G") {
+        let price = cupSize=="P" ? 3 : cupSize=="M" ? 5 : 7
+        super(price)
         this.cupSize = cupSize
     }
 
@@ -26,6 +32,14 @@ export default abstract class Drink {
     }
     mix(){
         //TODO: TO be implemented
+    }
+
+    image() {
+        return (
+            <div>
+                <img style={{height: "40px"}} src={testeCup} alt="Imagem bebida" />
+            </div>
+        )
     }
 
 }
