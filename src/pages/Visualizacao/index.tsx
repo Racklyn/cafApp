@@ -40,9 +40,9 @@ const Visualizacao = () => {
       </div>
       <div className='div-info-steps'>
         <span>ADICIONANDO A BEBIDA</span>
-        <span>{`>`} ADICIONANDO O COMPLEMENTO</span>
-        <span>{`>`} ADOÇANDO</span>
-        <span>{`>`} MISTURANDO</span>
+        <span className='padding-span'>{`>`} ADICIONANDO O COMPLEMENTO</span>
+        <span className='padding-span'>{`>`} ADOÇANDO</span>
+        <span className='padding-span'>{`>`} MISTURANDO</span>
       </div>
       <div className='div-visualizacao'>
         {/*adicionar aqui o gif do cafe*/}
