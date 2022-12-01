@@ -11,7 +11,7 @@ export default class SideDish extends Item {
         this.imageUrl = imageUrl
     }
 
-    image() {
+    image = () => {
         return(
             <img src={this.imageUrl} alt={`imagem ${this.title}`}/>
         )

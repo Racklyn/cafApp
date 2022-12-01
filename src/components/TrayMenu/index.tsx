@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useMain } from "../../contexts/main";
 import Tray from "../../model/Tray"
 import Button from "../Button"
 import "./styles.css"
@@ -9,12 +10,14 @@ type Props = {
 
 function TrayMenu({ tray }: Props) {
 
+    const {user} = useMain()
+
     return (
         <div className="tray-container">
             <h1>cafApp</h1>
 
             <div className="tray-info">
-                <p>BANDEJA DE ...</p>
+                <p>BANDEJA DE {user?.name.toUpperCase()}</p>
                 <p>28 DE NOVEMBRO DE 2022</p>
             </div>
             <hr/>
@@ -25,7 +28,7 @@ function TrayMenu({ tray }: Props) {
                     return(
                         <>
                             <p>Item: {item.title}</p>
-                            {item.image()}
+                            {item.image(60)}
                         </>
                     )
                 })}

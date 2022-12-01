@@ -1,5 +1,7 @@
 import Item from "./Item"
 import testeCup from '../assets/drinkImages/teste-cup.png'
+import testeComp from '../assets/drinkImages/teste-comple.png'
+import './styles/drinkImage.css'
 
 export default abstract class Drink extends Item {
     
@@ -34,10 +36,17 @@ export default abstract class Drink extends Item {
         //TODO: TO be implemented
     }
 
-    image() {
+    image = (size: number) => {
         return (
-            <div>
-                <img style={{height: "40px"}} src={testeCup} alt="Imagem bebida" />
+            <div
+                className="drink-image"
+                style={{
+                    backgroundImage: `url(${testeCup})`,
+                    height: size,
+                    width: size
+                }}
+            >
+                <img className="img-complement" src={testeComp} alt="Imagem bebida" />
             </div>
         )
     }

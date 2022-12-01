@@ -6,5 +6,5 @@ export default abstract class Item {
         this.price = price
     }
 
-    abstract image(): {}
+    abstract image: (size:number) => {}
 }
