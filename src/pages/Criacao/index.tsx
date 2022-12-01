@@ -38,17 +38,8 @@ const Criacao = () => {
     new Flavor('Macchiato', '', macchiatoCafe),
   ]
 
-  const [selFlavor, setFlavor] = useState("EXPRESSO" as "EXPRESSO" | "AMERICANO" | "MACCHIATO")
-
-  const [checkedState, setCheckedState] = useState(new Array(complementos.length).fill(false))
-
-  const handleOnChange = (position: number) => {
-    const updatedCheckedState = checkedState.map((item, index) =>
-      index === position ? !item : item
-    );
-    setCheckedState(updatedCheckedState);
-  };
-
+  const [selFlavor, setFlavor] = useState(0)
+  const [selComplement, setComplement] = useState(0)
   const [selSugarQtd, setSugarQtd] = useState("0" as "0" | "1" | "2" | "3")
 
   return (
@@ -59,36 +50,29 @@ const Criacao = () => {
       <div className='div-complementos'>
         <p>Escolha o sabor:</p>
         <div className='div-flavor-options'>
-          <FlavorCard
-            title="Expresso"
-            image={expressoCafe}
-            isSelected={selFlavor === "EXPRESSO"}
-            onClick={() => setFlavor("EXPRESSO")}
-          />
-          <FlavorCard
-            title="Americano"
-            image={americanoCafe}
-            isSelected={selFlavor === "AMERICANO"}
-            onClick={() => setFlavor("AMERICANO")}
-          />
-          <FlavorCard
-            title="Macchiato"
-            image={macchiatoCafe}
-            isSelected={selFlavor === "MACCHIATO"}
-            onClick={() => setFlavor("MACCHIATO")}
-          />
+          {saboresCafe.map((Flavor, index) => {
+            return (
+              <FlavorCard
+              title={Flavor.title}
+              image={Flavor.imageURL}
+              isSelected={selFlavor === index}
+              onClick={() => setFlavor(index)}
+              />
+            );
+          })}
+          
         </div>
       
         <p>Escolha os complementos:</p>
-        <p id='p-obs'><i>(cada um custa R$4.00, escolha no máximo 3)</i></p>
+        <p id='p-obs'><i>(cada um custa R$4.00)</i></p>
         <div className='div-complemento-options'>
           {complementos.map((Complement, index) => {
             return (
               <ComplementoCard
               title={Complement.title}
               image={Complement.imageURL}
-              isSelected={checkedState[index]}
-              onClick={() => handleOnChange(index)}
+              isSelected={selComplement === index}
+              onClick={() => setComplement(index)}
               />
             );
           })}
