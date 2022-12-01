@@ -1,3 +1,5 @@
+import { ReactNode } from "react"
+
 export default abstract class Item {
     title = "item"
     price = 0
@@ -6,5 +8,6 @@ export default abstract class Item {
         this.price = price
     }
 
-    abstract image: (size:number) => {}
+    abstract image: (size:number,children?: ReactNode) => {}
+    abstract getInfo():string
 }

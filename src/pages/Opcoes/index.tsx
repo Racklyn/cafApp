@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState, MouseEvent } from 'react';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import './opcoes.css';
 
 import CoffeeCardImg from '../../assets/coffee-card-img.png'
@@ -16,8 +16,11 @@ import Tray from '../../model/Tray';
 import Coffee from '../../model/Coffee';
 import Tea from '../../model/Tea';
 import HotChocolate from '../../model/HotChocolate';
+import Item from '../../model/Item';
+import { CriacaoParams } from '../Criacao';
 
-type sizes = 'P'|'M'|'G'
+export type sizes = 'P'|'M'|'G'
+export type drinkOptions = "COFFEE" | "TEA" | "CHOCO"
 
 const Opcoes = () => {
 
@@ -28,6 +31,8 @@ const Opcoes = () => {
     "TEA": {"P":2.5, "M":4, "G":5.5},
     "CHOCO": {"P":3.5, "M":5.5, "G":8}
   }
+
+  const navigate = useNavigate()
 
   const { user } = useMain()
 
@@ -44,10 +49,18 @@ const Opcoes = () => {
     }
   }, [])
 
-  function addDrink(){
-    if (selDrinkOption=="COFFEE") tray.addItem(new Coffee(selDrinkSize))
-    else if (selDrinkOption=="TEA") tray.addItem(new Tea(selDrinkSize))
-    else if (selDrinkOption=="CHOCO") tray.addItem(new HotChocolate(selDrinkSize))
+  //e: React.MouseEvent<HTMLButtonElement, globalThis.MouseEvent>
+  function goToDrinkCreation(){
+    let item: Item
+
+    if (selDrinkOption=="COFFEE") item = new Coffee(selDrinkSize)
+    else if (selDrinkOption=="TEA") item = new Tea(selDrinkSize)
+    else item = new HotChocolate(selDrinkSize)
+
+    navigate('/criacao', {state: {
+      drinkType: selDrinkOption,
+      drinkSize: selDrinkSize
+    } as CriacaoParams})
   }
 
   return (
@@ -100,9 +113,9 @@ const Opcoes = () => {
             }
           </div>
           <Button
-            title='COMPRAR'
+            title='CRIAR'
             isDark
-            onClick={addDrink}
+            onClick={goToDrinkCreation}
           />
         </div>
     

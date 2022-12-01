@@ -17,4 +17,8 @@ export default class SideDish extends Item {
         )
     }
 
+    getInfo() {
+        return this.title
+    }
+
 }

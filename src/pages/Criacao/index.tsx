@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import './style.css';
 
 import expressoCafe from '../../assets/expresso-cafe-img.png'
@@ -18,11 +18,27 @@ import FlavorCard from '../../components/FlavorCard';
 import ComplementoCard from '../../components/ComplementoCard';
 
 import {ArrowRight} from 'phosphor-react';
+import { drinkOptions, sizes } from '../Opcoes';
 
 import Complement from '../../model/Complement';
 import Flavor from '../../model/Flavor';
+import { useMain } from '../../contexts/main';
+//import { VisualizacaoParams } from '../Visualizacao';
+
+export type CriacaoParams = {
+  drinkType: drinkOptions;
+  drinkSize: sizes;
+}
+
 
 const Criacao = () => {
+
+  const location = useLocation()
+  const {drinkType, drinkSize} = location.state as CriacaoParams
+
+  const navigate = useNavigate()
+
+  const {currentDrink} = useMain()
 
   const complementos = [
     new Complement('Chocolate', '', chocolateComp), 
@@ -41,6 +57,14 @@ const Criacao = () => {
   const [selFlavor, setFlavor] = useState(0)
   const [selComplement, setComplement] = useState(0)
   const [selSugarQtd, setSugarQtd] = useState("0" as "0" | "1" | "2" | "3")
+
+  function navigateToViewPage() {
+    //currentDrink.selectedComplements.push(complementos[0]) //TODO: Change this
+    currentDrink.selectedComplement = complementos[0]
+    currentDrink.selectedFlavor = saboresCafe[1]
+
+    navigate('/visualizacao')
+  }
 
   return (
     <main>
@@ -102,9 +126,10 @@ const Criacao = () => {
         />
         </div>
         
-        <Link to='/visualizacao'>
-          <button className='button-next'><ArrowRight size={35} weight="bold" /></button>
-        </Link>
+        
+        <button className='button-next' onClick={navigateToViewPage}>
+          <ArrowRight size={35} weight="bold" />
+        </button>
       </div>
     </main>
   );
