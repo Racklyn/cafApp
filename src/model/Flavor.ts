@@ -1,11 +1,11 @@
 export default class Flavor{
-    title: String
-    description: String
-    //image: 
+    title: string
+    description: string
+    imageURL: string
 
-    constructor (title: String, description: String){
+    constructor (title: string, description: string, imageURL: string){
         this.title = title
         this.description = description
-        //
+        this.imageURL = imageURL
     }
 }
