@@ -25,6 +25,9 @@ export type CriacaoParams = {
   drinkSize: sizes;
 }
 
+import Complement from '../../model/Complement';
+import Flavor from '../../model/Flavor';
+
 const Criacao = () => {
 
   const location = useLocation()
@@ -33,26 +36,17 @@ const Criacao = () => {
   const navigate = useNavigate()
 
   const complementos = [
-    {
-      name: "Chocolate",
-      image: chocolateComp,
-    },
-    {
-      name: "Canela",
-      image: canelaComp,
-    },
-    {
-      name: "Noz-moscada",
-      image: nozMoscadaComp,
-    },
-    {
-      name: "Baunilha",
-      image: baunilhaComp,
-    },
-    {
-      name: "Hortelã",
-      image: hortelaComp,
-    },
+    new Complement('Chocolate', '', chocolateComp), 
+    new Complement('Canela', '', canelaComp), 
+    new Complement('Noz-moscada', '', nozMoscadaComp), 
+    new Complement('Baunilha', '', baunilhaComp), 
+    new Complement('Hortelã', '', hortelaComp),
+  ]
+
+  const saboresCafe = [
+    new Flavor('Expresso', '', expressoCafe),
+    new Flavor('Americano', '', americanoCafe),
+    new Flavor('Macchiato', '', macchiatoCafe),
   ]
 
   const [selFlavor, setFlavor] = useState("EXPRESSO" as "EXPRESSO" | "AMERICANO" | "MACCHIATO")
@@ -105,11 +99,11 @@ const Criacao = () => {
         <p>Escolha os complementos:</p>
         <p id='p-obs'><i>(cada um custa R$4.00, escolha no máximo 3)</i></p>
         <div className='div-complemento-options'>
-          {complementos.map(({ name, image }, index) => {
+          {complementos.map((Complement, index) => {
             return (
               <ComplementoCard
-              title={name}
-              image={image}
+              title={Complement.title}
+              image={Complement.imageURL}
               isSelected={checkedState[index]}
               onClick={() => handleOnChange(index)}
               />
