@@ -11,6 +11,18 @@ main{
   padding-top: 15px;
 }
 
+.div-info-steps{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+span{
+  padding-left: 10px;
+}
+
 .button-mix{
   width: 120px;
   height: 40px;
